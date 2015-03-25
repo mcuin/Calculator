@@ -17,7 +17,7 @@
     <TableRow>
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/upLabel"
             android:id="@+id/upButton"
             android:clickable="true" />
@@ -30,6 +30,7 @@
             android:clickable="true" />
 
         <Button
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/clearLabel"
@@ -37,6 +38,7 @@
             android:clickable="true" />
 
         <Button
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/equalLabel"
