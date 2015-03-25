@@ -1,6 +1,25 @@
 <resources>
     <string name="app_name">Memory Calculator</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="upLabel">\u25b2</string>
+    <string name="downLabel">\u25bc</string>
+    <string name="clearLabel">Clear</string>
+    <string name="equalLabel">=</string>
+    <string name="openParenthesisLabel">(</string>
+    <string name="closeParenthesisLabel">)</string>
+    <string name="decimalLabel">.</string>
+    <string name="divideLabel">\u00f7</string>
+    <string name="sevenLabel">7</string>
+    <string name="eightLabel">8</string>
+    <string name="nineLabel">9</string>
+    <string name="multiplyLabel">*</string>
+    <string name="fourLabel">4</string>
+    <string name="fiveLabel">5</string>
+    <string name="sixLabel">6</string>
+    <string name="subtractLabel">-</string>
+    <string name="oneLabel">1</string>
+    <string name="twoLabel">2</string>
+    <string name="threeLabel">3</string>
+    <string name="addLabel">+</string>
+
 </resources>
