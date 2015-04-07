@@ -1,175 +1,202 @@
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1" >
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:rowCount="9"
+    android:columnCount="4"
+    android:orientation="vertical">
 
-    <TableRow>
-        <EditText
+        <TextView
             android:id="@+id/number_field"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:digits="0123456789.-"
-            android:layout_span="4" />
-    </TableRow>
-    
-    <TableRow>
-        <Button
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/upLabel"
-            android:id="@+id/upButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/downLabel"
-            android:id="@+id/downButton"
-            android:clickable="true" />
-
-        <Button
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/clearLabel"
-            android:id="@+id/clearButton"
-            android:clickable="true" />
-
-        <Button
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/equalLabel"
-            android:id="@+id/equalsButton"
-            android:clickable="true" />
-    </TableRow>
-
-    <TableRow>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/openParenthesisLabel"
-            android:id="@+id/openParenthesisButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/closeParenthesisLabel"
-            android:id="@+id/closeParenthesisButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/decimalLabel"
-            android:id="@+id/decimalButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/divideLabel"
-            android:id="@+id/divideButton"
-            android:clickable="true" />
-    </TableRow>
-
-    <TableRow>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sevenLabel"
-            android:id="@+id/sevenButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/eightLabel"
-            android:id="@+id/eightButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nineLabel"
-            android:id="@+id/nineButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/multiplyLabel"
-            android:id="@+id/multiplyButton"
-            android:clickable="true" />
-    </TableRow>
-
-    <TableRow>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fourLabel"
-            android:id="@+id/fourButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/fiveLabel"
-            android:id="@+id/fiveButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/sixLabel"
-            android:id="@+id/sixButton"
-            android:clickable="true" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/subtractLabel"
-            android:id="@+id/subtractButton"
-            android:clickable="true" />
-    </TableRow>
-
-    <TableRow>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oneLabel"
-            android:id="@+id/oneButton"
-            android:clickable="true"
-            android:layout_column="0" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/twoLabel"
-            android:id="@+id/twoButton"
-            android:clickable="true"
-            android:layout_column="1" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/threeLabel"
-            android:id="@+id/threeButton"
-            android:clickable="true"
-            android:layout_column="2" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/addLabel"
-            android:id="@+id/abbButton"
-            android:clickable="true"
-            android:layout_column="3" />
-    </TableRow>
+            android:text="Hello Calculator"
+            android:layout_columnSpan="4"
+            android:layout_rowSpan="3"/>
 
 
-</TableLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upLabel"
+                android:id="@+id/upButton"
+                android:clickable="true"
+                android:layout_column="0"
+                android:layout_row="4"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/downLabel"
+                android:id="@+id/downButton"
+                android:clickable="true"
+                android:layout_column="1"
+                android:layout_row="4"/>
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clearLabel"
+                android:id="@+id/clearButton"
+                android:clickable="true"
+                android:layout_column="2"
+                android:layout_row="4"/>
+
+            <Button
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/equalLabel"
+                android:id="@+id/equalsButton"
+                android:clickable="true"
+                android:layout_column="3"
+                android:layout_row="4"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/openParenthesisLabel"
+                android:id="@+id/openParenthesisButton"
+                android:clickable="true"
+                android:layout_column="0"
+                android:layout_row="5"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/closeParenthesisLabel"
+                android:id="@+id/closeParenthesisButton"
+                android:clickable="true"
+                android:layout_column="1"
+                android:layout_row="5"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/decimalLabel"
+                android:id="@+id/decimalButton"
+                android:clickable="true"
+                android:layout_column="2"
+                android:layout_row="5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divideLabel"
+                android:id="@+id/divideButton"
+                android:clickable="true"
+                android:layout_column="3"
+                android:layout_row="5"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sevenLabel"
+                android:id="@+id/sevenButton"
+                android:clickable="true"
+                android:layout_column="0"
+                android:layout_row="6"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eightLabel"
+                android:id="@+id/eightButton"
+                android:clickable="true"
+                android:layout_column="1"
+                android:layout_row="6"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nineLabel"
+                android:id="@+id/nineButton"
+                android:clickable="true"
+                android:layout_column="2"
+                android:layout_row="6"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/multiplyLabel"
+                android:id="@+id/multiplyButton"
+                android:clickable="true"
+                android:layout_column="3"
+                android:layout_row="7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fourLabel"
+                android:id="@+id/fourButton"
+                android:clickable="true"
+                android:layout_column="0"
+                android:layout_row="7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fiveLabel"
+                android:id="@+id/fiveButton"
+                android:clickable="true"
+                android:layout_column="1"
+                android:layout_row="7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sixLabel"
+                android:id="@+id/sixButton"
+                android:clickable="true"
+                android:layout_column="2"
+                android:layout_row="7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtractLabel"
+                android:id="@+id/subtractButton"
+                android:clickable="true"
+                android:layout_column="3"
+                android:layout_row="7"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oneLabel"
+                android:id="@+id/oneButton"
+                android:clickable="true"
+                android:layout_colume="0"
+                android:layout_row="8"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twoLabel"
+                android:id="@+id/twoButton"
+                android:clickable="true"
+                android:layout_column="1"
+                android:layout_row="8"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/threeLabel"
+                android:id="@+id/threeButton"
+                android:clickable="true"
+                android:layout_column="2"
+                android:layout_row="8"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/addLabel"
+                android:id="@+id/abbButton"
+                android:clickable="true"
+                android:layout_column="3"
+                android:layout_row="8"/>
+
+
+
+</GridLayout>
