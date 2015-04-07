@@ -35,11 +35,26 @@ public class MemoryCalculator extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public int add(int a, int b) {
+
+    public double add(double a, double b) {
+        double x = a;
+        double y = b;
+        double z;
+
+        z = x + y;
+
+        return z;
+    }
+
+    public double sub(double a, double b) {
 
     }
 
-    public double add(double a, double b) {
-        
+    public double mult(double a, double b) {
+
+    }
+
+    public double div(double a, double b) {
+
     }
 }
