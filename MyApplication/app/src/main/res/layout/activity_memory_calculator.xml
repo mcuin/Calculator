@@ -123,7 +123,7 @@
                 android:id="@+id/multiplyButton"
                 android:clickable="true"
                 android:layout_column="3"
-                android:layout_row="7"/>
+                android:layout_row="6"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -167,7 +167,7 @@
                 android:text="@string/oneLabel"
                 android:id="@+id/oneButton"
                 android:clickable="true"
-                android:layout_colume="0"
+                android:layout_column="0"
                 android:layout_row="8"/>
 
             <Button

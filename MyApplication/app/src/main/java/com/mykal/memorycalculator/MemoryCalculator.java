@@ -47,14 +47,32 @@ public class MemoryCalculator extends Activity {
     }
 
     public double sub(double a, double b) {
+        double x = a;
+        double y = b;
+        double z;
 
+        z = a - b;
+
+        return z;
     }
 
     public double mult(double a, double b) {
+        double x = a;
+        double y = b;
+        double z;
 
+        z = a * b;
+
+        return z;
     }
 
     public double div(double a, double b) {
+        double x = a;
+        double y = b;
+        double z;
 
+        z = a / b;
+
+        return z;
     }
 }
