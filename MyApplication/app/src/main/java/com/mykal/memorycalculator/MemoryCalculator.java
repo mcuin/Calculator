@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 
 public class MemoryCalculator extends Activity {
+    double x, y, z;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +38,8 @@ public class MemoryCalculator extends Activity {
 
 
     public double add(double a, double b) {
-        double x = a;
-        double y = b;
-        double z;
+        x = a;
+        y = b;
 
         z = x + y;
 
@@ -47,9 +47,8 @@ public class MemoryCalculator extends Activity {
     }
 
     public double sub(double a, double b) {
-        double x = a;
-        double y = b;
-        double z;
+        x = a;
+        y = b;
 
         z = a - b;
 
@@ -57,9 +56,8 @@ public class MemoryCalculator extends Activity {
     }
 
     public double mult(double a, double b) {
-        double x = a;
-        double y = b;
-        double z;
+        x = a;
+        y = b;
 
         z = a * b;
 
@@ -67,9 +65,8 @@ public class MemoryCalculator extends Activity {
     }
 
     public double div(double a, double b) {
-        double x = a;
-        double y = b;
-        double z;
+        x = a;
+        y = b;
 
         z = a / b;
 

@@ -2,18 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:rowCount="9"
-    android:columnCount="4"
+    android:rowCount="2"
+    android:columnCount="1"
     android:orientation="vertical">
 
         <TextView
             android:id="@+id/number_field"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
             android:text="Hello Calculator"
-            android:layout_columnSpan="4"
-            android:layout_rowSpan="3"/>
+            android:layout_columnSpan="1"
+            android:layout_rowSpan="1"
+            android:layout_row="0"
+            android:layout_column="0" />
 
+            <GridLayout
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:rowCount="5"
+                android:columnCount="4">
 
             <Button
                 android:layout_width="wrap_content"
@@ -22,7 +29,7 @@
                 android:id="@+id/upButton"
                 android:clickable="true"
                 android:layout_column="0"
-                android:layout_row="4"/>
+                android:layout_row="0"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -31,7 +38,7 @@
                 android:id="@+id/downButton"
                 android:clickable="true"
                 android:layout_column="1"
-                android:layout_row="4"/>
+                android:layout_row="0"/>
 
             <Button
 
@@ -41,62 +48,62 @@
                 android:id="@+id/clearButton"
                 android:clickable="true"
                 android:layout_column="2"
-                android:layout_row="4"/>
+                android:layout_row="0"/>
 
-            <Button
+    <Button
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/equalLabel"
-                android:id="@+id/equalsButton"
-                android:clickable="true"
-                android:layout_column="3"
-                android:layout_row="4"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/equalLabel"
+        android:id="@+id/equalsButton"
+        android:clickable="true"
+        android:layout_column="3"
+        android:layout_row="0"/>
 
-            <Button
+    <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/openParenthesisLabel"
                 android:id="@+id/openParenthesisButton"
                 android:clickable="true"
                 android:layout_column="0"
-                android:layout_row="5"/>
+                android:layout_row="1"/>
 
-            <Button
+    <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/closeParenthesisLabel"
                 android:id="@+id/closeParenthesisButton"
                 android:clickable="true"
                 android:layout_column="1"
-                android:layout_row="5"/>
+                android:layout_row="1"/>
 
-            <Button
+    <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/decimalLabel"
                 android:id="@+id/decimalButton"
                 android:clickable="true"
                 android:layout_column="2"
-                android:layout_row="5" />
+                android:layout_row="1" />
 
-            <Button
+    <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/divideLabel"
                 android:id="@+id/divideButton"
                 android:clickable="true"
                 android:layout_column="3"
-                android:layout_row="5"/>
+                android:layout_row="1"/>
 
-            <Button
+    <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sevenLabel"
                 android:id="@+id/sevenButton"
                 android:clickable="true"
                 android:layout_column="0"
-                android:layout_row="6"/>
+                android:layout_row="2"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -105,7 +112,7 @@
                 android:id="@+id/eightButton"
                 android:clickable="true"
                 android:layout_column="1"
-                android:layout_row="6"/>
+                android:layout_row="2"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -114,7 +121,7 @@
                 android:id="@+id/nineButton"
                 android:clickable="true"
                 android:layout_column="2"
-                android:layout_row="6"/>
+                android:layout_row="2"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -123,7 +130,7 @@
                 android:id="@+id/multiplyButton"
                 android:clickable="true"
                 android:layout_column="3"
-                android:layout_row="6"/>
+                android:layout_row="2"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -132,7 +139,7 @@
                 android:id="@+id/fourButton"
                 android:clickable="true"
                 android:layout_column="0"
-                android:layout_row="7"/>
+                android:layout_row="3"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -141,7 +148,7 @@
                 android:id="@+id/fiveButton"
                 android:clickable="true"
                 android:layout_column="1"
-                android:layout_row="7"/>
+                android:layout_row="3"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -150,7 +157,7 @@
                 android:id="@+id/sixButton"
                 android:clickable="true"
                 android:layout_column="2"
-                android:layout_row="7"/>
+                android:layout_row="3"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -159,7 +166,7 @@
                 android:id="@+id/subtractButton"
                 android:clickable="true"
                 android:layout_column="3"
-                android:layout_row="7"/>
+                android:layout_row="3"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -168,7 +175,7 @@
                 android:id="@+id/oneButton"
                 android:clickable="true"
                 android:layout_column="0"
-                android:layout_row="8"/>
+                android:layout_row="4"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -177,7 +184,7 @@
                 android:id="@+id/twoButton"
                 android:clickable="true"
                 android:layout_column="1"
-                android:layout_row="8"/>
+                android:layout_row="4"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -186,7 +193,7 @@
                 android:id="@+id/threeButton"
                 android:clickable="true"
                 android:layout_column="2"
-                android:layout_row="8"/>
+                android:layout_row="4"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -195,8 +202,8 @@
                 android:id="@+id/abbButton"
                 android:clickable="true"
                 android:layout_column="3"
-                android:layout_row="8"/>
-
+                android:layout_row="4"/>
+            </GridLayout>
 
 
 </GridLayout>
