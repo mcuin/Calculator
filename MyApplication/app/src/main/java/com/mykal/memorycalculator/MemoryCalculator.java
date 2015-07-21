@@ -64,12 +64,35 @@ public class MemoryCalculator extends Activity {
             @Override
             public void onClick(View v) {
                 text = numberField.getText().toString();
-                System.out.println(text);
                 if (text.contains("+")) {
                     parts = text.split("\\+");
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
-                    add(x ,y);
+                    add(x, y);
+                    answer = Double.toString(z);
+                    numberField.getEditableText().clear();
+                    numberField.getEditableText().append(answer);
+                } else if (text.contains("-")) {
+                    parts = text.split("\\-");
+                    x = Double.parseDouble(parts[0]);
+                    y = Double.parseDouble(parts[1]);
+                    sub(x, y);
+                    answer = Double.toString(z);
+                    numberField.getEditableText().clear();
+                    numberField.getEditableText().append(answer);
+                } else if (text.contains("*")) {
+                    parts = text.split("\\*");
+                    x = Double.parseDouble(parts[0]);
+                    y = Double.parseDouble(parts[1]);
+                    mult(x, y);
+                    answer = Double.toString(z);
+                    numberField.getEditableText().clear();
+                    numberField.getEditableText().append(answer);
+                } else if (text.contains("/")) {
+                    parts = text.split(("\\/"));
+                    x = Double.parseDouble(parts[0]);
+                    y = Double.parseDouble(parts[1]);
+                    div(x, y);
                     answer = Double.toString(z);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
