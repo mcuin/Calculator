@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 public class MemoryCalculator extends Activity {
     double x, y, z;
+    String text, answer;
+    String[] parts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,22 @@ public class MemoryCalculator extends Activity {
             }
         });
         Button equalsButtons = (Button) findViewById(R.id.equalsButton);
+        equalsButtons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                text = numberField.getText().toString();
+                System.out.println(text);
+                if (text.contains("+")) {
+                    parts = text.split("\\+");
+                    x = Double.parseDouble(parts[0]);
+                    y = Double.parseDouble(parts[1]);
+                    add(x ,y);
+                    answer = Double.toString(z);
+                    numberField.getEditableText().clear();
+                    numberField.getEditableText().append(answer);
+                }
+            }
+        });
         Button decimalButton = (Button) findViewById(R.id.decimalButton);
         decimalButton.setOnClickListener(new View.OnClickListener() {
             @Override
