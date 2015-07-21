@@ -10,16 +10,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 
 public class MemoryCalculator extends Activity {
     double x, y, z;
     String text, answer;
     String[] parts;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_calculator);
+
+        final ArrayList<String> memory = new ArrayList<>();
 
         final EditText numberField = (EditText) findViewById(R.id.number_field);
         Button clearButton = (Button) findViewById(R.id.clearButton);
@@ -30,7 +35,22 @@ public class MemoryCalculator extends Activity {
             }
         });
         Button upButton = (Button) findViewById(R.id.upButton);
+        upButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().clear();
+                numberField.getEditableText().append(memory.get(i));
+                i++;
+            }
+        });
         Button downButton = (Button) findViewById(R.id.downButton);
+        downButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().clear();
+                //numberField.getEditableText().append(memory.get(i.size()));
+            }
+        });
         Button addButton = (Button) findViewById(R.id.abbButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +90,7 @@ public class MemoryCalculator extends Activity {
                     y = Double.parseDouble(parts[1]);
                     add(x, y);
                     answer = Double.toString(z);
+                    memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("-")) {
@@ -78,6 +99,7 @@ public class MemoryCalculator extends Activity {
                     y = Double.parseDouble(parts[1]);
                     sub(x, y);
                     answer = Double.toString(z);
+                    memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("*")) {
@@ -86,6 +108,7 @@ public class MemoryCalculator extends Activity {
                     y = Double.parseDouble(parts[1]);
                     mult(x, y);
                     answer = Double.toString(z);
+                    memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("/")) {
@@ -94,6 +117,7 @@ public class MemoryCalculator extends Activity {
                     y = Double.parseDouble(parts[1]);
                     div(x, y);
                     answer = Double.toString(z);
+                    memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 }
