@@ -5,15 +5,43 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MemoryCalculator extends Activity {
     double x, y, z;
+    TextView textView;
+    Button addButton, subButton, multButton, divButton, equalsButtons, decimalButton, openParaButton, closeParaButton;
+    Button nineButton, eightButton, sevenButton, sixButton, fiveButton, fourButton, threeButton, twoButton, oneButton;
+    Button clearButton, upButton, downButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_calculator);
+
+        textView.findViewById(R.id.number_field);
+        clearButton.findViewById(R.id.clearButton);
+        upButton.findViewById(R.id.upButton);
+        downButton.findViewById(R.id.downButton);
+        addButton.findViewById(R.id.abbButton);
+        subButton.findViewById(R.id.subtractButton);
+        multButton.findViewById(R.id.multiplyButton);
+        divButton.findViewById(R.id.divideButton);
+        equalsButtons.findViewById(R.id.equalsButton);
+        decimalButton.findViewById(R.id.decimalButton);
+        openParaButton.findViewById(R.id.openParenthesisButton);
+        closeParaButton.findViewById(R.id.closeParenthesisButton);
+        nineButton.findViewById(R.id.nineButton);
+        eightButton.findViewById(R.id.eightButton);
+        sevenButton.findViewById(R.id.sevenButton);
+        sixButton.findViewById(R.id.sixButton);
+        fiveButton.findViewById(R.id.fiveButton);
+        fourButton.findViewById(R.id.fourButton);
+        threeButton.findViewById(R.id.threeButton);
+        twoButton.findViewById(R.id.twoButton);
+        oneButton.findViewById(R.id.oneButton);
     }
 
 

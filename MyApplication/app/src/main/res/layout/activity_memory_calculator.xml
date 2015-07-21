@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:rowCount="2"
     android:columnCount="1"
-    android:orientation="vertical">
+    android:orientation="vertical" >
 
         <TextView
             android:id="@+id/number_field"
@@ -20,7 +20,7 @@
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent"
                 android:rowCount="5"
-                android:columnCount="4">
+                android:columnCount="4" >
 
             <Button
                 android:layout_width="wrap_content"
