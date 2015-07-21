@@ -6,7 +6,7 @@
     android:columnCount="1"
     android:orientation="vertical" >
 
-        <TextView
+        <EditText
             android:id="@+id/number_field"
             android:layout_width="match_parent"
             android:layout_height="75dp"

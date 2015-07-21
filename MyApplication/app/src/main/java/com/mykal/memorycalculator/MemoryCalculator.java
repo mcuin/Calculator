@@ -5,43 +5,143 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
 public class MemoryCalculator extends Activity {
     double x, y, z;
-    TextView textView;
-    Button addButton, subButton, multButton, divButton, equalsButtons, decimalButton, openParaButton, closeParaButton;
-    Button nineButton, eightButton, sevenButton, sixButton, fiveButton, fourButton, threeButton, twoButton, oneButton;
-    Button clearButton, upButton, downButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_calculator);
 
-        textView.findViewById(R.id.number_field);
-        clearButton.findViewById(R.id.clearButton);
-        upButton.findViewById(R.id.upButton);
-        downButton.findViewById(R.id.downButton);
-        addButton.findViewById(R.id.abbButton);
-        subButton.findViewById(R.id.subtractButton);
-        multButton.findViewById(R.id.multiplyButton);
-        divButton.findViewById(R.id.divideButton);
-        equalsButtons.findViewById(R.id.equalsButton);
-        decimalButton.findViewById(R.id.decimalButton);
-        openParaButton.findViewById(R.id.openParenthesisButton);
-        closeParaButton.findViewById(R.id.closeParenthesisButton);
-        nineButton.findViewById(R.id.nineButton);
-        eightButton.findViewById(R.id.eightButton);
-        sevenButton.findViewById(R.id.sevenButton);
-        sixButton.findViewById(R.id.sixButton);
-        fiveButton.findViewById(R.id.fiveButton);
-        fourButton.findViewById(R.id.fourButton);
-        threeButton.findViewById(R.id.threeButton);
-        twoButton.findViewById(R.id.twoButton);
-        oneButton.findViewById(R.id.oneButton);
+        final EditText numberField = (EditText) findViewById(R.id.number_field);
+        Button clearButton = (Button) findViewById(R.id.clearButton);
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().clear();
+            }
+        });
+        Button upButton = (Button) findViewById(R.id.upButton);
+        Button downButton = (Button) findViewById(R.id.downButton);
+        Button addButton = (Button) findViewById(R.id.abbButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("+");
+            }
+        });
+        Button subButton = (Button) findViewById(R.id.subtractButton);
+        subButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("-");
+            }
+        });
+        Button multButton = (Button) findViewById(R.id.multiplyButton);
+        multButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("*");
+            }
+        });
+        Button divButton = (Button) findViewById(R.id.divideButton);
+        divButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("/");
+            }
+        });
+        Button equalsButtons = (Button) findViewById(R.id.equalsButton);
+        Button decimalButton = (Button) findViewById(R.id.decimalButton);
+        decimalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append(".");
+            }
+        });
+        Button openParaButton = (Button) findViewById(R.id.openParenthesisButton);
+        openParaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("(");
+            }
+        });
+        Button closeParaButton = (Button) findViewById(R.id.closeParenthesisButton);
+        closeParaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append(")");
+            }
+        });
+        Button nineButton = (Button) findViewById(R.id.nineButton);
+        nineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("9");
+            }
+        });
+        Button eightButton = (Button) findViewById(R.id.eightButton);
+        eightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("8");
+            }
+        });
+        Button sevenButton = (Button) findViewById(R.id.sevenButton);
+        sevenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("7");
+            }
+        });
+        Button sixButton = (Button) findViewById(R.id.sixButton);
+        sixButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("6");
+            }
+        });
+        Button fiveButton = (Button) findViewById(R.id.fiveButton);
+        fiveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("5");
+            }
+        });
+        Button fourButton = (Button) findViewById(R.id.fourButton);
+        fourButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("4");
+            }
+        });
+        Button threeButton = (Button) findViewById(R.id.threeButton);
+        threeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("3");
+            }
+        });
+        Button twoButton = (Button) findViewById(R.id.twoButton);
+        twoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("2");
+            }
+        });
+        Button oneButton = (Button) findViewById(R.id.oneButton);
+        oneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("1");
+            }
+        });
     }
 
 
