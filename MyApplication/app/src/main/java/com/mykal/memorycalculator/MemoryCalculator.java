@@ -40,7 +40,7 @@ public class MemoryCalculator extends Activity {
             public void onClick(View v) {
                 if (i < memory.size()) {
                     numberField.getEditableText().clear();
-                    numberField.getEditableText().append(memory.get(memory.size() - (i - 1)));
+                    numberField.setText(memory.get((memory.size() - 1) - (i)));
                     i++;
                 } else {
                     return;
