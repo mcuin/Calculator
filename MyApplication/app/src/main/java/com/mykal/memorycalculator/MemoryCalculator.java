@@ -230,6 +230,20 @@ public class MemoryCalculator extends Activity {
                 numberField.setText(numberField.getText().delete(numberField.length() - 1, numberField.length()));
             }
         });
+        Button sqRootButton = (Button) findViewById(R.id.sqRootButton);
+        sqRootButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("\u221a");
+            }
+        });
+        Button sqButton = (Button) findViewById(R.id.squareButton);
+        sqButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numberField.getEditableText().append("^");
+            }
+        });
     }
 
 

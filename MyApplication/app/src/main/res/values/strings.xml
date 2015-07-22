@@ -21,5 +21,9 @@
     <string name="twoLabel">2</string>
     <string name="threeLabel">3</string>
     <string name="addLabel">+</string>
+    <string name="zeroLabel">0</string>
+    <string name="deleteLabel">Delete</string>
+    <string name="squareLabel">^</string>
+    <string name="sqRootLabel">\u221a</string>
 
 </resources>
