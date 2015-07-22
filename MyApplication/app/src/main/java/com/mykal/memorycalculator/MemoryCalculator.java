@@ -51,8 +51,13 @@ public class MemoryCalculator extends Activity {
         downButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberField.getEditableText().clear();
-                //numberField.getEditableText().append(memory.get(i.size()));
+                if (i < memory.size()) {
+                    numberField.getEditableText().clear();
+                    numberField.setText(memory.get((memory.size() - 1) + (i)));
+                    i--;
+                } else {
+                    return;
+                }
             }
         });
         Button addButton = (Button) findViewById(R.id.addButton);
@@ -245,6 +250,21 @@ public class MemoryCalculator extends Activity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
     }
 
 
