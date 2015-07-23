@@ -129,6 +129,22 @@ public class MemoryCalculator extends Activity {
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
+                } else if (text.contains("\u221a")) {
+                    parts = text.split("\\\u221a");
+                    x = Double.parseDouble(parts[2]);
+                    sqRoot(x);
+                    answer = Double.toString(z);
+                    memory.add(answer);
+                    numberField.getEditableText().clear();
+                    numberField.getEditableText().append(answer);
+                } else if (text.contains("^")) {
+                    parts = text.split("\\^");
+                    x = Double.parseDouble(parts[0]);
+                    y = Double.parseDouble(parts[1]);
+                    square(x, y);
+                    answer = Double.toString(z);
+                    numberField.getEditableText().clear();
+                    numberField.getEditableText().append(answer);
                 }
             }
         });
@@ -314,6 +330,20 @@ public class MemoryCalculator extends Activity {
         y = b;
 
         z = a / b;
+
+        return z;
+    }
+
+    public double sqRoot(double a) {
+
+        z = a / a;
+
+        return z;
+    }
+
+    public double square(double a, double b) {
+
+        z = Math.pow(a, b);
 
         return z;
     }
