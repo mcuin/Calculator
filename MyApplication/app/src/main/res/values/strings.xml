@@ -23,7 +23,7 @@
     <string name="addLabel">+</string>
     <string name="zeroLabel">0</string>
     <string name="deleteLabel">Delete</string>
-    <string name="squareLabel">^</string>
+    <string name="squareLabel">\u00b2</string>
     <string name="sqRootLabel">\u221a</string>
 
 </resources>

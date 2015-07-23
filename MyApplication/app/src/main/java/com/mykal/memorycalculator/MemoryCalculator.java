@@ -248,7 +248,7 @@ public class MemoryCalculator extends Activity {
         sqRootButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                numberField.getEditableText().append("\u221a");
+                numberField.getEditableText().insert(0, "\u221a");
             }
         });
         Button sqButton = (Button) findViewById(R.id.squareButton);
