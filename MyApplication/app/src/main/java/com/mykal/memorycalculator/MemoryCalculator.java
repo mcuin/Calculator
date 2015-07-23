@@ -1,14 +1,12 @@
 package com.mykal.memorycalculator;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -131,7 +129,7 @@ public class MemoryCalculator extends Activity {
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("\u221a")) {
                     parts = text.split("\\\u221a");
-                    x = Double.parseDouble(parts[2]);
+                    x = Double.parseDouble(parts[1]);
                     sqRoot(x);
                     answer = Double.toString(z);
                     memory.add(answer);
@@ -336,7 +334,7 @@ public class MemoryCalculator extends Activity {
 
     public double sqRoot(double a) {
 
-        z = a / a;
+        z = Math.sqrt(a);
 
         return z;
     }
