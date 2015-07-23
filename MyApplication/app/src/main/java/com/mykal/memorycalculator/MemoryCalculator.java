@@ -1,12 +1,14 @@
 package com.mykal.memorycalculator;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,7 +43,11 @@ public class MemoryCalculator extends Activity {
                     numberField.setText(memory.get((memory.size() - 1) - (i)));
                     i++;
                 } else {
-                    return;
+                    Context context = getApplicationContext();
+                    CharSequence toastText = "No numbers in memory.";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, toastText, duration);
+                    toast.show();
                 }
             }
         });
@@ -49,12 +55,18 @@ public class MemoryCalculator extends Activity {
         downButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i < memory.size()) {
+                System.out.println(i);
+                System.out.println(memory.size());
+                if (i <= memory.size()) {
                     numberField.getEditableText().clear();
-                    numberField.setText(memory.get((memory.size() - 1) + (i)));
+                    numberField.setText(memory.get((memory.size() - 1) - (i)));
                     i--;
                 } else {
-                    return;
+                    Context context = getApplicationContext();
+                    CharSequence toastText = "No numbers in memory.";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(context, toastText, duration);
+                    toast.show();
                 }
             }
         });
@@ -119,7 +131,7 @@ public class MemoryCalculator extends Activity {
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("/")) {
-                    parts = text.split(("\\/"));
+                    parts = text.split(("/"));
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
                     div(x, y);
@@ -128,7 +140,7 @@ public class MemoryCalculator extends Activity {
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("\u221a")) {
-                    parts = text.split("\\\u221a");
+                    parts = text.split("\\u221a");
                     x = Double.parseDouble(parts[1]);
                     sqRoot(x);
                     answer = Double.toString(z);
@@ -297,8 +309,6 @@ public class MemoryCalculator extends Activity {
 
 
     public double add(double a, double b) {
-        x = a;
-        y = b;
 
         z = x + y;
 
@@ -306,8 +316,6 @@ public class MemoryCalculator extends Activity {
     }
 
     public double sub(double a, double b) {
-        x = a;
-        y = b;
 
         z = a - b;
 
@@ -315,8 +323,6 @@ public class MemoryCalculator extends Activity {
     }
 
     public double mult(double a, double b) {
-        x = a;
-        y = b;
 
         z = a * b;
 
@@ -324,8 +330,6 @@ public class MemoryCalculator extends Activity {
     }
 
     public double div(double a, double b) {
-        x = a;
-        y = b;
 
         z = a / b;
 
