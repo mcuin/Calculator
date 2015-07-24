@@ -41,11 +41,7 @@ public class MemoryCalculator extends Activity {
                     numberField.setText(memory.get((memory.size() - 1) - (i)));
                     i++;
                 } else {
-                    Context context = getApplicationContext();
-                    CharSequence toastText = "No numbers in memory.";
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(context, toastText, duration);
-                    toast.show();
+                    memoryToast();
                 }
             }
         });
@@ -55,16 +51,12 @@ public class MemoryCalculator extends Activity {
             public void onClick(View v) {
                 System.out.println(i);
                 System.out.println(memory.size());
-                if (i <= memory.size()) {
+                if (i < memory.size()) {
                     numberField.getEditableText().clear();
                     numberField.setText(memory.get((memory.size() - 1) - (i)));
                     i--;
                 } else {
-                    Context context = getApplicationContext();
-                    CharSequence toastText = "No numbers in memory.";
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(context, toastText, duration);
-                    toast.show();
+                    memoryToast();
                 }
             }
         });
@@ -343,5 +335,13 @@ public class MemoryCalculator extends Activity {
         }
 
         return answer;
+    }
+
+    public void memoryToast() {
+        Context context = getApplicationContext();
+        CharSequence toastText = "No numbers in memory.";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, toastText, duration);
+        toast.show();
     }
 }
