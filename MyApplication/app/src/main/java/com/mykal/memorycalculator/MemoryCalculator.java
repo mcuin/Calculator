@@ -289,53 +289,54 @@ public class MemoryCalculator extends Activity {
 
         z = a + b;
 
-        answer = Double.toString(z);
+        decimalCheck(z);
 
-        System.out.println(answer);
+        return answer;
+    }
 
+    public String sub(double a, double b) {
+
+        z = a - b;
+
+        return answer;
+    }
+
+    public String mult(double a, double b) {
+
+        z = a * b;
+
+        return answer;
+    }
+
+    public String div(double a, double b) {
+
+        z = a / b;
+
+        return answer;
+    }
+
+    public String sqRoot(double a) {
+
+        z = Math.sqrt(a);
+
+        return answer;
+    }
+
+    public String square(double a, double b) {
+
+        z = Math.pow(a, b);
+
+        return answer;
+    }
+
+    public String decimalCheck(double a) {
+
+        answer = Double.toString(a);
         parts = answer.split("\\.");
-
-        System.out.println(parts[0]);
-
         if (parts[1].equals("0")) {
             answer = parts[0];
         }
 
         return answer;
-    }
-
-    public double sub(double a, double b) {
-
-        z = a - b;
-
-        return z;
-    }
-
-    public double mult(double a, double b) {
-
-        z = a * b;
-
-        return z;
-    }
-
-    public double div(double a, double b) {
-
-        z = a / b;
-
-        return z;
-    }
-
-    public double sqRoot(double a) {
-
-        z = Math.sqrt(a);
-
-        return z;
-    }
-
-    public double square(double a, double b) {
-
-        z = Math.pow(a, b);
-
-        return z;
     }
 }
