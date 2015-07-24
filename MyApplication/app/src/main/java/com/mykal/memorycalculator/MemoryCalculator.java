@@ -3,8 +3,6 @@ package com.mykal.memorycalculator;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -108,7 +106,6 @@ public class MemoryCalculator extends Activity {
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
                     add(x, y);
-                    answer = Double.toString(z);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
@@ -272,26 +269,6 @@ public class MemoryCalculator extends Activity {
         });
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_memory_calculator, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @Override
     public void onPause() {
         super.onPause();
@@ -308,11 +285,23 @@ public class MemoryCalculator extends Activity {
     }
 
 
-    public double add(double a, double b) {
+    public String add(double a, double b) {
 
-        z = x + y;
+        z = a + b;
 
-        return z;
+        answer = Double.toString(z);
+
+        System.out.println(answer);
+
+        parts = answer.split("\\.");
+
+        System.out.println(parts[0]);
+
+        if (parts[1].equals("0")) {
+            answer = parts[0];
+        }
+
+        return answer;
     }
 
     public double sub(double a, double b) {
