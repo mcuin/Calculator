@@ -15,7 +15,7 @@ public class MemoryCalculator extends Activity {
     double x, y, z;
     String text, answer;
     String[] parts;
-    int i = 0;
+    int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +51,9 @@ public class MemoryCalculator extends Activity {
             public void onClick(View v) {
                 System.out.println(i);
                 System.out.println(memory.size());
-                if (i < memory.size()) {
+                if (i <= memory.size() || i > 0) {
                     numberField.getEditableText().clear();
-                    numberField.setText(memory.get((memory.size() - 1) - (i)));
+                    numberField.setText(memory.get((memory.size() - 2) + (i)));
                     i--;
                 } else {
                     memoryToast();
