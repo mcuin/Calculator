@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -95,9 +96,9 @@ public class MemoryCalculator extends Activity {
                 text = numberField.getText().toString();
                 if (text.contains("+")) {
                     parts = text.split("\\+");
-                    x = Double.parseDouble(parts[0]);
-                    y = Double.parseDouble(parts[1]);
-                    add(x, y);
+                    //x = Double.parseDouble(parts[0]);
+                    //y = Double.parseDouble(parts[1]);
+                    add(parts);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
@@ -272,9 +273,12 @@ public class MemoryCalculator extends Activity {
     }
 
 
-    public String add(double a, double b) {
+    public String add(String a[]) {
 
-        z = a + b;
+        for (int j = 0; j < a.length; j++) {
+            double b = Double.parseDouble(parts[j]);
+            z = z + b;
+        }
 
         decimalCheck(z);
 
