@@ -114,7 +114,6 @@ public class MemoryCalculator extends Activity {
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
                     sub(x, y);
-                    answer = Double.toString(z);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
@@ -123,7 +122,6 @@ public class MemoryCalculator extends Activity {
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
                     mult(x, y);
-                    answer = Double.toString(z);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
@@ -132,7 +130,6 @@ public class MemoryCalculator extends Activity {
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
                     div(x, y);
-                    answer = Double.toString(z);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
@@ -140,7 +137,6 @@ public class MemoryCalculator extends Activity {
                     parts = text.split("\\u221a");
                     x = Double.parseDouble(parts[1]);
                     sqRoot(x);
-                    answer = Double.toString(z);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
@@ -149,7 +145,6 @@ public class MemoryCalculator extends Activity {
                     x = Double.parseDouble(parts[0]);
                     y = Double.parseDouble(parts[1]);
                     square(x, y);
-                    answer = Double.toString(z);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 }
@@ -298,12 +293,16 @@ public class MemoryCalculator extends Activity {
 
         z = a - b;
 
+        decimalCheck(z);
+
         return answer;
     }
 
     public String mult(double a, double b) {
 
         z = a * b;
+
+        decimalCheck(z);
 
         return answer;
     }
@@ -312,6 +311,8 @@ public class MemoryCalculator extends Activity {
 
         z = a / b;
 
+        decimalCheck(z);
+
         return answer;
     }
 
@@ -319,12 +320,16 @@ public class MemoryCalculator extends Activity {
 
         z = Math.sqrt(a);
 
+        decimalCheck(z);
+
         return answer;
     }
 
     public String square(double a, double b) {
 
         z = Math.pow(a, b);
+
+        decimalCheck(z);
 
         return answer;
     }
