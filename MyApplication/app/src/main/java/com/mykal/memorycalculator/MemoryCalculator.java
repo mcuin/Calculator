@@ -7,9 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 public class MemoryCalculator extends Activity {
@@ -96,39 +95,31 @@ public class MemoryCalculator extends Activity {
                 text = numberField.getText().toString();
                 if (text.contains("+")) {
                     parts = text.split("\\+");
-                    //x = Double.parseDouble(parts[0]);
-                    //y = Double.parseDouble(parts[1]);
                     add(parts);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("-")) {
                     parts = text.split("\\-");
-                    x = Double.parseDouble(parts[0]);
-                    y = Double.parseDouble(parts[1]);
-                    sub(x, y);
+                    sub(parts);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("*")) {
                     parts = text.split("\\*");
-                    x = Double.parseDouble(parts[0]);
-                    y = Double.parseDouble(parts[1]);
-                    mult(x, y);
+                    mult(parts);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("/")) {
                     parts = text.split(("/"));
-                    x = Double.parseDouble(parts[0]);
-                    y = Double.parseDouble(parts[1]);
-                    div(x, y);
+                    div(parts);
                     memory.add(answer);
                     numberField.getEditableText().clear();
                     numberField.getEditableText().append(answer);
                 } else if (text.contains("\u221a")) {
                     parts = text.split("\\u221a");
-                    x = Double.parseDouble(parts[1]);
+                    x = Double.parseDouble(parts[0]);
                     sqRoot(x);
                     memory.add(answer);
                     numberField.getEditableText().clear();
@@ -285,34 +276,43 @@ public class MemoryCalculator extends Activity {
         return answer;
     }
 
-    public String sub(double a, double b) {
+    public String sub(String a[]) {
 
-        z = a - b;
-
-        decimalCheck(z);
-
-        return answer;
-    }
-
-    public String mult(double a, double b) {
-
-        z = a * b;
+        for (int j = 0; j < a.length; j++) {
+            double b = Double.parseDouble(parts[j]);
+            z = b - z;
+        }
 
         decimalCheck(z);
 
         return answer;
     }
 
-    public String div(double a, double b) {
+    public String mult(String a[]) {
 
-        z = a / b;
+        for (int j = 0; j < a.length; j++) {
+            double b = Double.parseDouble(parts[j]);
+            z = z * b;
+        }
 
         decimalCheck(z);
 
         return answer;
     }
 
-    public String sqRoot(double a) {
+    public String div(String a[]) {
+
+        for (int j = 0; j < a.length; j++) {
+            double b = Double.parseDouble(parts[j]);
+            z = z / b;
+        }
+
+        decimalCheck(z);
+
+        return answer;
+    }
+
+    public String sqRoot(Double a) {
 
         z = Math.sqrt(a);
 
@@ -321,7 +321,7 @@ public class MemoryCalculator extends Activity {
         return answer;
     }
 
-    public String square(double a, double b) {
+    public String square(Double a, Double b) {
 
         z = Math.pow(a, b);
 
